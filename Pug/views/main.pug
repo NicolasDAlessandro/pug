@@ -1,0 +1,18 @@
+extends ./index.pug
+
+block main
+    h3="Products: "
+        div
+            if productsOn
+                table 
+                    tr
+                        th="Name"
+                        th="Price"
+                        th="Image"
+                        each prod in products
+                            tr
+                                td= prod.name 
+                                td= prod.price 
+                                td 
+                                    img(src=prod.url alt=prod.name)
+
